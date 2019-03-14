@@ -23,9 +23,15 @@ Rails.application.configure do
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier
+  # config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
-
+  config.assets.js_compressor = Uglifier.new(harmony: true) 
+  config.assets.compress = true
+  
+  config.after_initialize do
+    config.assets.css_compressor = nil
+  end
+  config.sass.style = :compressed
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
 
@@ -52,7 +58,7 @@ Rails.application.configure do
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
   config.log_level = :debug
-
+  config.logger = Logger.new(STDOUT)
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
 
@@ -91,4 +97,16 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  config.action_mailer.default_url_options = {host: "anmol-chasmaghar.herokuapp.com"}
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  address: "smtp.gmail.com",
+  port: 587,
+  domain: "gmail.com",
+  authentication: "plain",
+  user_name: Rails.application.credentials.email,
+  password: Rails.application.credentials.password,
+  enable_starttls_auto: true
+}
 end

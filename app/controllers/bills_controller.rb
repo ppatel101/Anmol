@@ -29,6 +29,7 @@ class BillsController < ApplicationController
 
     respond_to do |format|
       if @bill.save
+        AdminMailer.contact_information.deliver
         format.html { redirect_to @bill, notice: 'Bill was successfully created.' }
         format.json { render :show, status: :created, location: @bill }
       else
