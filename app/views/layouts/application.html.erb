@@ -2,24 +2,26 @@
 <html>
   <head>
     <title>Anmol</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- DataTables Select CSS -->
+    <link href="https://cdn.datatables.net/select/1.2.2/css/select.dataTables.min.css" rel="stylesheet">
+    <!-- DataTables Select CSS -->
+    <script href="https://cdn.datatables.net/select/1.2.2/js/dataTables.select.min.js" rel="stylesheet"></script>
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <div id="user_nav">
-      <% if user_signed_in? %>
-        Signed in as <%= current_user.email %>. Not you?
-        <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-      <% else %>
-        <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
-      <% end %>
-    </div>
+
+    <% if user_signed_in? %>
+      Signed in as <%= current_user.email %>. Not you?
+      <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
