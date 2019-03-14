@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bills</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Bill no</th>
+      <th>Date</th>
+      <th>Amount</th>
+      <th>Detail</th>
+      <th>Re sph dist</th>
+      <th>Re sph nr</th>
+      <th>Re cyl dist</th>
+      <th>Re cyl nr</th>
+      <th>Re axis</th>
+      <th>Le sph dist</th>
+      <th>Le sph nr</th>
+      <th>Le cyl dist</th>
+      <th>Le cyl nr</th>
+      <th>Le axis</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bills.each do |bill| %>
+      <tr>
+        <td><%= bill.name %></td>
+        <td><%= bill.bill_no %></td>
+        <td><%= bill.date %></td>
+        <td><%= bill.amount %></td>
+        <td><%= bill.detail %></td>
+        <td><%= bill.re_sph_dist %></td>
+        <td><%= bill.re_sph_nr %></td>
+        <td><%= bill.re_cyl_dist %></td>
+        <td><%= bill.re_cyl_nr %></td>
+        <td><%= bill.re_axis %></td>
+        <td><%= bill.le_sph_dist %></td>
+        <td><%= bill.le_sph_nr %></td>
+        <td><%= bill.le_cyl_dist %></td>
+        <td><%= bill.le_cyl_nr %></td>
+        <td><%= bill.le_axis %></td>
+        <td><%= link_to 'Show', bill %></td>
+        <td><%= link_to 'Edit', edit_bill_path(bill) %></td>
+        <td><%= link_to 'Destroy', bill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bill', new_bill_path %>

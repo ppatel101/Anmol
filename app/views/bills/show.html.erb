@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @bill.name %>
+</p>
+
+<p>
+  <strong>Bill no:</strong>
+  <%= @bill.bill_no %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @bill.date %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @bill.amount %>
+</p>
+
+<p>
+  <strong>Detail:</strong>
+  <%= @bill.detail %>
+</p>
+
+<p>
+  <strong>Re sph dist:</strong>
+  <%= @bill.re_sph_dist %>
+</p>
+
+<p>
+  <strong>Re sph nr:</strong>
+  <%= @bill.re_sph_nr %>
+</p>
+
+<p>
+  <strong>Re cyl dist:</strong>
+  <%= @bill.re_cyl_dist %>
+</p>
+
+<p>
+  <strong>Re cyl nr:</strong>
+  <%= @bill.re_cyl_nr %>
+</p>
+
+<p>
+  <strong>Re axis:</strong>
+  <%= @bill.re_axis %>
+</p>
+
+<p>
+  <strong>Le sph dist:</strong>
+  <%= @bill.le_sph_dist %>
+</p>
+
+<p>
+  <strong>Le sph nr:</strong>
+  <%= @bill.le_sph_nr %>
+</p>
+
+<p>
+  <strong>Le cyl dist:</strong>
+  <%= @bill.le_cyl_dist %>
+</p>
+
+<p>
+  <strong>Le cyl nr:</strong>
+  <%= @bill.le_cyl_nr %>
+</p>
+
+<p>
+  <strong>Le axis:</strong>
+  <%= @bill.le_axis %>
+</p>
+
+<%= link_to 'Edit', edit_bill_path(@bill) %> |
+<%= link_to 'Back', bills_path %>

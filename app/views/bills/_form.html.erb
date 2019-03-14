@@ -1,0 +1,92 @@
+<%= form_with(model: bill, local: true) do |form| %>
+  <% if bill.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bill.errors.count, "error") %> prohibited this bill from being saved:</h2>
+
+      <ul>
+      <% bill.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bill_no %>
+    <%= form.text_field :bill_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.text_field :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.text_field :amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :detail %>
+    <%= form.text_field :detail %>
+  </div>
+
+  <div class="field">
+    <%= form.label :re_sph_dist %>
+    <%= form.text_field :re_sph_dist %>
+  </div>
+
+  <div class="field">
+    <%= form.label :re_sph_nr %>
+    <%= form.text_field :re_sph_nr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :re_cyl_dist %>
+    <%= form.text_field :re_cyl_dist %>
+  </div>
+
+  <div class="field">
+    <%= form.label :re_cyl_nr %>
+    <%= form.text_field :re_cyl_nr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :re_axis %>
+    <%= form.text_field :re_axis %>
+  </div>
+
+  <div class="field">
+    <%= form.label :le_sph_dist %>
+    <%= form.text_field :le_sph_dist %>
+  </div>
+
+  <div class="field">
+    <%= form.label :le_sph_nr %>
+    <%= form.text_field :le_sph_nr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :le_cyl_dist %>
+    <%= form.text_field :le_cyl_dist %>
+  </div>
+
+  <div class="field">
+    <%= form.label :le_cyl_nr %>
+    <%= form.text_field :le_cyl_nr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :le_axis %>
+    <%= form.text_field :le_axis %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

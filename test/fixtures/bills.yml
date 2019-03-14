@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  bill_no: MyString
+  date: MyString
+  amount: MyString
+  detail: MyString
+  re_sph_dist: MyString
+  re_sph_nr: MyString
+  re_cyl_dist: MyString
+  re_cyl_nr: MyString
+  re_axis: MyString
+  le_sph_dist: MyString
+  le_sph_nr: MyString
+  le_cyl_dist: MyString
+  le_cyl_nr: MyString
+  le_axis: MyString
+
+two:
+  name: MyString
+  bill_no: MyString
+  date: MyString
+  amount: MyString
+  detail: MyString
+  re_sph_dist: MyString
+  re_sph_nr: MyString
+  re_cyl_dist: MyString
+  re_cyl_nr: MyString
+  re_axis: MyString
+  le_sph_dist: MyString
+  le_sph_nr: MyString
+  le_cyl_dist: MyString
+  le_cyl_nr: MyString
+  le_axis: MyString
